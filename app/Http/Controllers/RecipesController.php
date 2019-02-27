@@ -21,8 +21,12 @@ class RecipesController extends Controller
 
     public function store(Request $request)
     {
-        
-        return Recipe::create($request->all());
+        $recipe = Recipe::create([
+            'name' =>$request->name,
+            'email' => $request->email
+        ]);
+
+        return $recipe;
     }
 
     public function update(Request $request, $id) 
