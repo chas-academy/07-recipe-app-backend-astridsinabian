@@ -12,10 +12,9 @@ Route::group([
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
 
-    Route::get('recipelists', 'RecipesController@index');
+    Route::get('recipelists/{email}', 'RecipesController@index');
+    Route::post('recipelists/add', 'RecipesController@store');
     Route::get('recipelists/{id}', 'RecipesController@show');
-    Route::post('recipelists', 'RecipesController@store');
-    Route::put('recipelists/{id}', 'RecipesController@update');
     Route::delete('recipelists/{id}', 'RecipesController@delete');
 
 });

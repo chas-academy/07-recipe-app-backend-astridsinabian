@@ -8,10 +8,14 @@ use App\Recipe;
 class RecipesController extends Controller
 {
 
-
-    public function index()
+    public function __construct()
     {
-        return Recipe::all();
+        $this->middleware('auth:api')->except(['get', 'store', 'index', 'delete']);
+    }
+
+    public function index($email)
+    {
+        return Recipe::all()->where('email', $email);
     }
 
     public function show($id) 
@@ -21,6 +25,7 @@ class RecipesController extends Controller
 
     public function store(Request $request)
     {
+        
         $recipe = Recipe::create([
             'name' =>$request->name,
             'email' => $request->email
@@ -29,12 +34,6 @@ class RecipesController extends Controller
         return $recipe;
     }
 
-    public function update(Request $request, $id) 
-    {
-        if($id != null) {
-            Recipe::find('id', $id)->update($request->all());
-        }
-    }
 
     public function delete(Request $request, $id) 
     {
