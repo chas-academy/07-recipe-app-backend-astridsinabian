@@ -18,5 +18,6 @@ Route::group([
     Route::delete('recipelists/{id}', 'RecipesController@delete');
     Route::get('profilelist/{email}', 'ProfilelistController@index');
     Route::post('profilelist/add', 'ProfilelistController@store');
+    Route::delete('profilelist/add/{id}', 'ProfilelistController@delete');
 
 });

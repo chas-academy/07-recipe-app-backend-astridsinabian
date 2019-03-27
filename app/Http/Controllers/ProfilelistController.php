@@ -20,4 +20,13 @@ class ProfilelistController extends Controller
 
         return $profilelist;
     }
+
+    public function delete(Request $request, $id) 
+    {
+        if ($id != null) {
+            $profilelist = Profilelists::find($id);
+            $profilelist->delete();
+        }
+    }
+
 }
