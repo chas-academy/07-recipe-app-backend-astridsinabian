@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recipe extends Model
 {
-    protected $fillable = ['id', 'name', 'email'];
+    protected $fillable = ['id', 'name', 'list_id', 'email'];
 
-    protected $table = 'lists';
+    public function profilelists()
+    {
+        return $this->belongsToMany(Profilelists::class);
+    }
+    
+   
 
 }

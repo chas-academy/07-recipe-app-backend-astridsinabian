@@ -28,7 +28,8 @@ class RecipesController extends Controller
         
         $recipe = Recipe::create([
             'name' =>$request->name,
-            'email' => $request->email
+            'email' => $request->email,
+            'list_id' => $request->list_id
         ]);
 
         return $recipe;
