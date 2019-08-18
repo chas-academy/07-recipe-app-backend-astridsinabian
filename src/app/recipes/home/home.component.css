@@ -1,6 +1,6 @@
 .home-view {
     height: 800px;
-    background-image: url("src/assets/image/jason-leung-717686-unsplash.jpg");
+    background-image: url("/assets/image/jason-leung-717686-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
