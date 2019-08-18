@@ -1,0 +1,55 @@
+<clr-main-container>
+<div class="card" *ngIf="recipe">
+        <div class="card-img">
+            <img src="{{ recipe.images[0].hostedLargeUrl }}">
+        </div>
+        <div class="card-block">
+            <h4 class="card-title">{{ recipe.name }}</h4>
+            <p class="card-text">
+                   {{ recipe.attributes.course }} 
+            </p>
+        </div>
+        <div class="ingredientLines">
+            {{ recipe.ingredientLines }}
+        </div>
+        <div class="card-footer">
+            <button (click)="addRecipeModal = true" class="btn btn-primary">Add to list</button>
+            <button type="button" routerLink="/recipes"class="btn btn-icon btn-primary">
+                <clr-icon shape="undo"></clr-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <footer>
+            <div class="footer-div"> Recipe App made by Astrid Sinabian</div>
+        </footer>
+    </div>
+    
+    
+    <clr-modal *ngIf="recipe" [(clrModalOpen)]="addRecipeModal">
+        <h3 class="modal-title">Add recipe</h3>
+        <div class="modal-body">
+            <p>Add {{ recipe.name }} to:</p>
+            <clr-dropdown [clrCloseMenuOnItemClick]="false">
+                    <button type="button" class="btn btn-outline-primary" clrDropdownTrigger>
+                           Lists
+                            <clr-icon shape="caret down"></clr-icon>
+                    </button>
+                    <clr-dropdown-menu *clrIfOpen>
+                        <button type="button" clrDropdownItem *ngFor="let profilelist of profilelists" (click)="addRecipes(profilelist.id)">
+                            {{ profilelist.name }}
+                        </button>
+                    </clr-dropdown-menu>
+                </clr-dropdown>
+           
+        
+        <div class="modal-footer">
+            
+            <button type="button" class="btn btn-primary" (click)="addRecipeModal = false">Cancel</button>
+        </div>
+    </div>
+</clr-modal>
+
+
+</clr-main-container>

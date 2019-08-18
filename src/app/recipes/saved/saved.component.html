@@ -1,0 +1,39 @@
+<div class="saved-view">
+<form (ngSubmit)="onSubmit($event.target)">
+    <div id="create-list-form">
+        <label class="list-label">Create new list</label>
+            <div>
+                <input type="text" name="name" class="input-list-name" placeholder="List name">
+                <input type="submit" value="submit" class="btn btn-icon btn-success">
+            </div>
+    </div>
+</form>
+
+<div class="clr-row">
+    <div *ngFor="let profilelist of profilelists" class="clr-col-lg-4 clr-col-sm-6 clr-col-12 list">
+        <div class="card">
+            <div class="card-header">
+                {{ profilelist.name }}
+            </div> 
+            <div class="card-block">
+                <ul class="list-unstyled" >
+                    <div *ngFor="let recipe of savedRecipe">
+                    <li *ngIf="profilelist.id == recipe.list_id" class="recipe-list" >
+                        {{ recipe.name }} 
+                        <button type="button" class="btn btn-icon btn-sm btn-warning" (click)="deleteRecipe(recipe.id)">
+                            <clr-icon shape="trash"></clr-icon>
+                        </button>
+                    </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group btn-primary">
+                    <button class="btn btn-danger" (click)="deleteList(profilelist.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

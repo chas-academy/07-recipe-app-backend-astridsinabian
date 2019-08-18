@@ -1,0 +1,67 @@
+.recipe-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clr-row {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+  
+    width: 80%;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.added-recipe {
+    padding: 5px;
+}
+
+.add-list {
+    margin-top: 1em;
+}
+
+.add-list-button {
+    margin: 0.5rem .5rem .25rem .5rem;
+}
+
+#create-list-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.input-list-name {
+    margin: 10px;
+}
+
+.list-label {
+    font-size: 18px;
+}
+
+.recipe-list {
+    display: flex;
+}
+
+.btn .btn-icon .btn-sm .btn-warning {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.saved-view {
+    margin-bottom: 100px;
+}

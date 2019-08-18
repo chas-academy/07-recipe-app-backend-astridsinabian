@@ -1,0 +1,33 @@
+
+
+.card {
+    width: 262px;          
+  position: relative;
+  bottom: 0px;
+    right:0;
+    left:0;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.card-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+}

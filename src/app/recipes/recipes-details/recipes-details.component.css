@@ -1,0 +1,41 @@
+.main-container {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 0.125rem 0 0 #d7d7d7;
+    border-radius: .125rem;
+    border: 1px solid #d7d7d7;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    width: 70%;
+}
+
+.ingredientLines {
+    padding: 20px;
+}
+
+.footer-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(56, 100, 131);
+    color: white;
+}
+  
+.footer-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

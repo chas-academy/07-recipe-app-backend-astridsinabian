@@ -1,0 +1,84 @@
+.home-view {
+    height: 800px;
+    background-image: url("src/assets/image/jason-leung-717686-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1 {
+    color: rgb(43, 43, 43);
+    font-weight: bold;
+}
+
+h4 {
+    color: rgb(43, 43, 43);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.welcome-sign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 0 20px 20px 20px;
+    background-color: rgba(135, 176, 226, 0.349);
+    border-radius: 1%;
+    width: 70%;
+    height: 50%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(56, 100, 131);
+    color: white;
+  }
+  
+  .footer-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    .home-view {
+        height: 400px;
+    }
+  
+    .welcome-sign {
+        margin: 0 20px 20px 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 26px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    h4 {
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: italic;
+        margin-top: 5px;
+    }
+
+  }

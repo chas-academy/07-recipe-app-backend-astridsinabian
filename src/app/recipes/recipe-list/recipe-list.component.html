@@ -1,0 +1,68 @@
+<clr-main-container>
+
+    <div>
+    <div class="clr-row search-div">
+        <button (click)="search()" class="clr-col-0 btn btn-icon">
+            <clr-icon shape="search"></clr-icon>
+        </button>
+      <input [(ngModel)]="searchString" class="clr-col search-input" placeholder="Search for recipes here..."/>
+    </div>
+    
+    <div class="clr-form-control">
+            <label class="clr-control-label">Filter search</label>
+            <div class="clr-control-container clr-control-inline">
+             
+              <div class="clr-checkbox-wrapper">
+                  <input type="checkbox" id="vertical-checkbox1" name="checkbox-full" (change)="filterAppetizers($event)" class="clr-checkbox">
+                  <label for="vertical-checkbox1" class="clr-control-label">Appetizers</label>
+                </div>
+                <div class="clr-checkbox-wrapper">
+                  <input type="checkbox" id="vertical-checkbox2" name="checkbox-full" (change)="filterMainDishes($event)" class="clr-checkbox">
+                  <label for="vertical-checkbox2" class="clr-control-label">Main dishes</label>
+                </div>
+                <div class="clr-checkbox-wrapper">
+                  <input type="checkbox" id="vertical-checkbox3" name="checkbox-full" (change)="filterDesserts($event)" class="clr-checkbox">
+                  <label for="vertical-checkbox3" class="clr-control-label">Desserts</label>
+                </div>
+
+                <div class="clr-checkbox-wrapper">
+                  <input type="checkbox" id="vertical-checkbox4" name="checkbox-full" (change)="filterGluten($event)" class="clr-checkbox">
+                  <label for="vertical-checkbox4" class="clr-control-label">Gluten Free</label>
+                </div>
+
+                <div class="clr-checkbox-wrapper">
+                  <input type="checkbox" id="vertical-checkbox5" name="checkbox-full" (change)="filterVegetarian($event)" class="clr-checkbox">
+                  <label for="vertical-checkbox5" class="clr-control-label">Vegetarian</label>
+                </div>
+            </div>
+          </div>
+
+
+</div>
+   
+    <div *ngIf="recipes">
+    <div class="clr-row">
+        <div class="clr-col-sm-12 clr-col-md-4 recipe-list" *ngFor="let recipe of recipes">
+            <a class="card clickable" routerLink="/recipes/{{recipe.id}}">
+                <div class="card-img">
+                    <img src="{{ recipe.smallImageUrls }}">
+                </div>
+                <div class="card-block">
+                    <p class="card-text"><strong>Recipe name:</strong> {{ recipe.recipeName }}</p>
+                    <p class="card-text"><strong>Rating:</strong> {{ recipe.rating }}</p>
+                </div>
+            </a>
+        </div>
+    </div> 
+
+</div>
+<div>
+<footer>
+        <div class="footer-div"> Recipe App made by Astrid Sinabian</div>
+</footer>
+</div>
+
+</clr-main-container>
+
+
+

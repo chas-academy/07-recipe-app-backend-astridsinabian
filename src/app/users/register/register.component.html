@@ -1,0 +1,38 @@
+<div class="row">
+  
+        <div class="card">
+            <div class="card-header">
+                Register
+            </div>
+            <form #registerForm=ngForm (ngSubmit)="onSubmit()">
+            <div class="card-block">
+
+                <div class="card-text" >
+                  <clr-input-container>
+                    <input type="text" name="name" clrInput placeholder="Name" 
+                    [(ngModel)]="form.name" required/>
+                </clr-input-container>
+                
+                    <clr-input-container>
+                      <input type="text" name="email" clrInput placeholder="Email" 
+                      [(ngModel)]="form.email" required/>
+                  </clr-input-container>
+
+                  <clr-password-container>
+                      <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="form.password" required/>
+                  </clr-password-container>
+
+                  <clr-password-container>
+                      <input type="password" name="password_confirmation" clrPassword placeholder="Confirm password" [(ngModel)]="form.password_confirmation" required/>
+                  </clr-password-container>
+
+            </div>
+            </div>
+            <div class="card-footer">
+
+            <input type="submit" class="btn btn-primary" value="Register">
+            
+        </div>
+          </form>
+    
+    </div>

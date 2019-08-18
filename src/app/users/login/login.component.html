@@ -1,0 +1,38 @@
+<div class="row">
+      <div class="card">
+          <div class="card-header">
+              Login
+          </div>
+          <form #loginForm=ngForm (ngSubmit)="onSubmit()">
+              <div class="alert alert-danger" role="alert" [hidden]="!error">
+                  <div class="alert-items">
+                      <div class="alert-item static">
+                          <div class="alert-icon-wrapper">
+                              <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                          </div>
+                          <span class="alert-text">
+                              {{ error }}
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          <div class="card-block">
+              <div class="card-text" >
+                <clr-input-container>
+                  <input type="text" name="email" clrInput placeholder="Email" 
+                  [(ngModel)]="form.email" required/>
+              </clr-input-container>
+              <clr-password-container>
+                  <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="form.password" required/>
+              </clr-password-container>
+              </div>
+          </div>
+          <div class="card-footer">
+
+          <input type="submit" class="btn btn-primary" value="Sign in">
+          
+          <input class="btn btn-info" routerLink="/register" value="Register">
+      </div>
+        </form>
+     
+  </div>
